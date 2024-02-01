@@ -3,6 +3,7 @@ import SecondComponent from './SecondComponent';
 import ThirdComponent from './ThirdComponent';
 import FourthComponent from './FourthComponent';
 import {FifthComponent} from './FirstComponent';
+import LearningJavascript from './LearningJavascript';
 
 
 function LearningComponent() {
@@ -13,6 +14,7 @@ function LearningComponent() {
         <ThirdComponent />
         <FourthComponent />
         <FifthComponent />
+        <LearningJavascript/>
       </div>
     ) 
   }
