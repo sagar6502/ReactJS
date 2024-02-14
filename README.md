@@ -10,5 +10,14 @@ npm start - start the react application
 npx create-react-app todo-app -  Creating a react app named "todo-app"
 
 
+Routing means process of navigating from one page to another page.
+
+Forms to capture user inputs.
+
+REST API calls
+
+Implement Authentication
+
+
 
 
