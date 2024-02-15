@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import {BrowserRouter, Route, Routes, useNavigate, useParams} from 'react-router-dom'
+import {BrowserRouter, Route, Routes, useNavigate, useParams, Link} from 'react-router-dom'
 import './TodoApp.css'
 
 export default function TodoApp() {
@@ -83,7 +83,7 @@ function WelcomeComponent() {
         <div className="WelcomeComponent">
             <h1>Welcome {username}</h1>
             <div >
-                Welcome
+                Manage Your Todos -  <Link to="/todos">Go here</Link>
             </div>
         </div>
     )
@@ -101,10 +101,14 @@ function ErrorComponent() {
 }
 
 function ListTodosComponent() {
+
+    const today = new Date()
+    const targetDate =  new Date(today.getFullYear()+12, today.getMonth(), today.getDay())
+
     const todos = [
-                    {id: 1, description: 'Learn CI'},
-                    {id: 2, description: 'Learn DevOps'},
-                    {id: 3, description: 'Learn Linux'},
+                    {id: 1, description: 'Learn CI', done:false, targetDate:targetDate},
+                    {id: 2, description: 'Learn DevOps', done:false, targetDate:targetDate},
+                    {id: 3, description: 'Learn Linux', done:false, targetDate:targetDate},
                     ]
 
     return (
@@ -116,6 +120,8 @@ function ListTodosComponent() {
                         <tr>
                             <td>Id</td>
                             <td>Description</td>
+                            <td>Is Done?</td>
+                            <td>TargetDate</td>
                         </tr>
                     </thead>
                     <tbody>
@@ -125,6 +131,8 @@ function ListTodosComponent() {
                                     <tr key={todo.id}>
                                         <td>{todo.id}</td>
                                         <td>{todo.description}</td>
+                                        <td>{todo.done.toString()}</td>
+                                        <td>{todo.targetDate.toDateString()}</td>
                                     </tr>
                                 )
                             )
