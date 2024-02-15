@@ -18,6 +18,8 @@ REST API calls
 
 Implement Authentication
 
+npm install react-router-dom --> to switch between react component
+
 
 
 
