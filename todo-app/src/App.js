@@ -1,11 +1,15 @@
 import './App.css';
 import Counter from './Components/counter/Counter'
+import TodoApp from './Components/todo/TodoApp';
 
 function App() {
   return (
     <>
-          <div className="App">
+          {/* <div className="App">
              <Counter/>
+          </div> */}
+          <div className='App'>
+            <TodoApp/>
           </div>
           
     </>
